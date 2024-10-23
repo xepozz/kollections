@@ -6,6 +6,7 @@ namespace Xepozz\Kollections;
 
 class Collection
 {
+    use FindTrait;
     use MapTrait;
     use FilterTrait;
 
