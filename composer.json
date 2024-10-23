@@ -2,7 +2,7 @@
     "name": "xepozz/kollections",
     "description": "Yet another collection implementation for PHP",
     "type": "library",
-    "license": "BSD",
+    "license": "MIT",
     "minimum-stability": "stable",
     "keywords": [
         "php",
