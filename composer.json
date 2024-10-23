@@ -2,11 +2,6 @@
     "name": "xepozz/kollections",
     "type": "library",
     "license": "BSD",
-    "autoload": {
-        "psr-4": {
-            "Xepozz\\Kollections\\": "src/"
-        }
-    },
     "authors": [
         {
             "name": "Dmitrii Derepko",
@@ -18,5 +13,15 @@
     },
     "require-dev": {
         "phpunit/phpunit": "^11.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Xepozz\\Kollections\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Xepozz\\Kollections\\Tests\\": "tests/"
+        }
     }
 }
