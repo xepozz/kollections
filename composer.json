@@ -1,7 +1,14 @@
 {
     "name": "xepozz/kollections",
+    "description": "Yet another collection implementation for PHP",
     "type": "library",
     "license": "BSD",
+    "minimum-stability": "stable",
+    "keywords": [
+        "php",
+        "array",
+        "collection"
+    ],
     "authors": [
         {
             "name": "Dmitrii Derepko",
@@ -14,6 +21,10 @@
     "require-dev": {
         "phpunit/phpunit": "^11.4"
     },
+    "scripts": {
+        "test": "phpunit --testdox",
+        "psalm": "psalm"
+    },
     "autoload": {
         "psr-4": {
             "Xepozz\\Kollections\\": "src/"
@@ -23,5 +34,8 @@
         "psr-4": {
             "Xepozz\\Kollections\\Tests\\": "tests/"
         }
+    },
+    "config": {
+        "sort-packages": true
     }
 }
