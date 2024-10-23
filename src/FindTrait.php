@@ -36,7 +36,7 @@ trait FindTrait
     {
         foreach ($this->values as $key => $value) {
             if ($callback($value, $key)) {
-                return $value;
+                return $key;
             }
         }
 

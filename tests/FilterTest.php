@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Xepozz\Kollections\Tests;
 
+use ArrayIterator;
 use DateTime;
 use DateTimeImmutable;
 use DateTimeInterface;
@@ -78,9 +79,16 @@ class FilterTest extends TestCase
 
     public function testFilterArrays(): void
     {
-        $collection = Collection::of([1, 2], 42, [3, 4], 1337, [5, 6]);
+        $collection = Collection::of($i = new ArrayIterator([1]), $a = [1, 2], 'val', 5);
         $collection->filterArrays();
-        $this->assertSame([0 => [1, 2], 2 => [3, 4], 4 => [5, 6]], $collection->getValues());
+        $this->assertSame([1 => $a], $collection->getValues());
+    }
+
+    public function testFilterIterables(): void
+    {
+        $collection = Collection::of($i = new ArrayIterator([1]), $a = [1, 2], 'val');
+        $collection->filterIterables();
+        $this->assertSame([$i, $a], $collection->getValues());
     }
 
     public function testFilterCallable(): void

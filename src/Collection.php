@@ -6,6 +6,7 @@ namespace Xepozz\Kollections;
 
 class Collection
 {
+    use SortTrait;
     use FindTrait;
     use MapTrait;
     use FilterTrait;
@@ -28,5 +29,10 @@ class Collection
     public function getValues(): array
     {
         return $this->values;
+    }
+
+    public function toArray(): array
+    {
+        return array_values($this->values);
     }
 }
