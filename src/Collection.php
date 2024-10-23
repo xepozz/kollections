@@ -6,6 +6,7 @@ namespace Xepozz\Kollections;
 
 class Collection
 {
+    use MapTrait;
     use FilterTrait;
 
     public function __construct(
